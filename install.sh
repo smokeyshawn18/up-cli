@@ -2,7 +2,7 @@
 
 set -e
 
-REPO="github.com/smokeyshawn18/up-cli"   # Change this to your actual GitHub repo
+REPO="smokeyshawn18/up-cli"
 VERSION="v1.0.0"
 BINARY_NAME="up-cli"
 
@@ -13,12 +13,8 @@ OS=$(uname -s)
 ARCH=$(uname -m)
 
 case "$OS" in
-  "Linux")
-    PLATFORM="linux"
-    ;;
-  "Darwin")
-    PLATFORM="darwin"
-    ;;
+  "Linux") PLATFORM="linux" ;;
+  "Darwin") PLATFORM="darwin" ;;
   *)
     echo "❌ Unsupported OS: $OS"
     echo "Please download manually from: https://github.com/$REPO/releases/tag/$VERSION"
@@ -27,12 +23,8 @@ case "$OS" in
 esac
 
 case "$ARCH" in
-  "x86_64")
-    ARCH="amd64"
-    ;;
-  "arm64" | "aarch64")
-    ARCH="arm64"
-    ;;
+  "x86_64") ARCH="amd64" ;;
+  "arm64" | "aarch64") ARCH="arm64" ;;
   *)
     echo "❌ Unsupported architecture: $ARCH"
     echo "Please download manually from: https://github.com/$REPO/releases/tag/$VERSION"
@@ -55,7 +47,4 @@ chmod +x "$BIN_NAME"
 echo "🚚 Moving to /usr/local/bin/$BINARY_NAME"
 sudo mv "$BIN_NAME" /usr/local/bin/$BINARY_NAME
 
-echo "🧹 Cleaning up..."
-rm "$ZIP_NAME"
-
-echo "✅ Installed! Run with: $BINARY_NAME --help or $BINARY_NAME -v"
+echo "✅ Installed! Try running: $BINARY_NAME --help"
