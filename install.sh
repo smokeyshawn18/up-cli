@@ -2,7 +2,7 @@
 
 set -e
 
-REPO="yourusername/up-cli"   # Change this to your actual GitHub repo
+REPO="github.com/smokeyshawn18/up-cli"   # Change this to your actual GitHub repo
 VERSION="v1.0.0"
 BINARY_NAME="up-cli"
 
