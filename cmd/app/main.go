@@ -54,15 +54,14 @@ func main() {
 		Version: version,
 	}
 
-	uploadCmd := &cobra.Command{
-		Use:   "upload [file]",
-		Short: "Upload a file to a cloud storage provider",
-		Args:  cobra.ExactArgs(1),
-		RunE: func(cmd *cobra.Command, args []string) error {
-			filePath := args[0]
-			return handler.Upload(cmd.Context(), filePath)
-		},
-	}
+uploadCmd := &cobra.Command{
+    Use:   "upload [files...]",
+    Short: "Upload one or more files to a cloud storage provider",
+    Args:  cobra.MinimumNArgs(1), // At least one file required
+    RunE: func(cmd *cobra.Command, args []string) error {
+        return handler.Upload(cmd.Context(), args) // pass []string of file paths
+    },
+}
 
 	rootCmd.AddCommand(uploadCmd)
 

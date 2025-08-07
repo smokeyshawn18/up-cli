@@ -7,6 +7,7 @@ require (
 	github.com/cloudinary/cloudinary-go/v2 v2.11.0
 	github.com/google/uuid v1.6.0
 	github.com/joho/godotenv v1.5.1
+	github.com/kurin/blazer v0.5.3
 	github.com/lib/pq v1.10.9
 	github.com/spf13/cobra v1.9.1
 	google.golang.org/api v0.244.0
@@ -41,8 +42,10 @@ require (
 	github.com/googleapis/gax-go/v2 v2.15.0 // indirect
 	github.com/gorilla/schema v1.4.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/kurin/blazer v0.5.3 // indirect
+	github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db // indirect
 	github.com/planetscale/vtprotobuf v0.6.1-0.20240319094008-0393e58bdf10 // indirect
+	github.com/rivo/uniseg v0.4.7 // indirect
+	github.com/schollz/progressbar/v3 v3.18.0 // indirect
 	github.com/spf13/pflag v1.0.6 // indirect
 	github.com/spiffe/go-spiffe/v2 v2.5.0 // indirect
 	github.com/zeebo/errs v1.4.0 // indirect
@@ -60,6 +63,7 @@ require (
 	golang.org/x/oauth2 v0.30.0 // indirect
 	golang.org/x/sync v0.16.0 // indirect
 	golang.org/x/sys v0.34.0 // indirect
+	golang.org/x/term v0.33.0 // indirect
 	golang.org/x/text v0.27.0 // indirect
 	golang.org/x/time v0.12.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
